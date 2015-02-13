@@ -5,12 +5,16 @@ date: "Spring 2015"
 output: html_document
 ---
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+This is our R Markdown document for our data on life expectancy. Follow this document to reproduce our work in R. To fork our work our find our source files find us on GitHub <https://github.com/agcarranza/DV_RProject2>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Our data consisted of 4656 observations on life expectancy in different countries based on sex, income group, region, age, and year.
+
+Here is a summary of our data.
+
+###Our Data###
 
 ```{r}
-summary(cars)
+source("../01 Data/OracleData_dataframe.R", echo=TRUE)
 ```
 
 You can also embed plots, for example:
