@@ -1,1 +1,1 @@
-ggplot(incomeGroup, aes(x=WORLD_BANK_INCOME_GROUP, y=avg_life_expectancy, color=WORLD_BANK_INCOME_GROUP)) + geom_bar(stat='identity') + facet_wrap(~YEAR) + ggtitle("Average Life Expectancy")
+ggplot(incomeGroup, aes(x=WORLD_BANK_INCOME_GROUP, y=avg_life_expectancy, color=WORLD_BANK_INCOME_GROUP, fill=WORLD_BANK_INCOME_GROUP)) + geom_bar(stat='identity') + facet_wrap(~YEAR) + ggtitle("Average Life Expectancy \n for Each Income Group")

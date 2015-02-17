@@ -34,3 +34,31 @@ For the vizualiation, we made a bar graph that represents the data. The average 
 ```{r, results='asis', message=FALSE, warning=FALSE}
 source("../03 Visualizations/income_life_ggplot.R", echo=TRUE)
 ```
+
+###Top Countries with Highest Life Expectancies###
+We were curious to see which citizens of what countries had the highest life expectancy at birth. We chose the top countries with the highest life expectancy and checked how these values change for each year the measurements were projected.
+
+We extracted the data that indicated the life expectancy at birth and filtered the data for both sexes to get an average and for each year.
+
+```{r, message=TRUE, warning=FALSE}
+source("../02 Data Wrangling/max_life.R", echo=TRUE)
+```
+
+The graph shows the life expectancies of the countries with the highest life expectancies per year. Notice that some countries do no have data for certain years. This shows that the ranking of those countries changed so that they are not included in the top 7 countries with highest life expectancy. We used the facet_wrap() function to seperate the plots for each of the three years.
+```{r, results='asis', message=FALSE, warning=FALSE}
+source("../03 Visualizations/max_life_plot.R", echo=TRUE)
+```
+
+
+###Life Expectancies per Country###
+
+The graph below shows life expectancy on the y-axis and country on the x-axis. The data is grouped by country and year. The color varies based on the year value. 
+
+```{r, message=TRUE, warning=FALSE}
+source("../02 Data Wrangling/country_year_life.R", echo=TRUE)
+```
+
+```{r, results='asis', message=FALSE, warning=FALSE}
+source("../03 Visualizations/country_life_plot.R", echo=TRUE)
+```
+

@@ -1,0 +1,1 @@
+ggplot(life, aes(x=COUNTRY, y=LIFE_EXPECTANCY)) + geom_point(aes(color=YEAR))
