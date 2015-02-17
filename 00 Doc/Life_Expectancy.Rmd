@@ -5,14 +5,32 @@ date: "Spring 2015"
 output: html_document
 ---
 
-This is our R Markdown document for our data on life expectancy. Follow this document to reproduce our work in R. To fork our work our find our source files find us on GitHub <https://github.com/agcarranza/DV_RProject2>.
+This is our R Markdown document for our data on life expectancy. Follow this document to reproduce our work in R. To fork our work or find our source files find us on GitHub <https://github.com/agcarranza/DV_RProject2>.
 
 Our data consisted of 4656 observations on life expectancy in different countries based on sex, income group, region, age, and year.
 
 Here is a summary of our data.
 
-###Our Data###
+###A Subset Of Our Data###
 
-```{r}
+```{r, results='asis', message=FALSE, warning=FALSE}
 source("../01 Data/OracleData_dataframe.R", echo=TRUE)
+```
+
+
+##Interesting Plots##
+###World Bank income group and Life Expectancy###
+
+Since wealthier people can spend more on healthcare and a better diet, we assumed that people with more income would live longer, so we wanted to test our assumptions. We tested this assumption by discovering which citizens of what country, based on the World Bank Income Groups, lived the longest.
+
+For the R code, we used the filter and summarise functions in the dplyr package to find the average life expectancy at birth of both sexes.
+
+```{r, message=TRUE, warning=FALSE}
+source("../02 Data Wrangling/income_life.R", echo=TRUE)
+```
+
+For the vizualiation, we made a bar graph that represents the data. The average life expectancy is on the Y-axis while the income group is on the x-axis.
+
+```{r, results='asis', message=FALSE, warning=FALSE}
+source("../03 Visualizations/income_life_ggplot.R", echo=TRUE)
 ```
